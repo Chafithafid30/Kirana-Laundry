@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Kirana Laundry Probolinggo
 
 Aplikasi Laundry Berbasis Web Menggunakan PHP
