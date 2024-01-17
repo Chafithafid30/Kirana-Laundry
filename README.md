@@ -1,6 +1,6 @@
-# 📝 Kirana-Laundry
+# 🧴 Kirana-Laundry
 
-### Description:
+### 📝 Description:
 Website-based laundry data collection management application using HTML5, CSS3, Javascript, jQuery, PHP 8, and MySQL which is intended to provide many conveniences to Laundry Businesses: Kirana Laundry, Probolinggo City
 
 ## ✅ Target Benefits That Have Been Achieved:
