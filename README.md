@@ -49,4 +49,3 @@ Website-based laundry data collection management application using HTML5, CSS3, 
 
 ## Architecture 🗼
 This app uses [***(OOP Paradigm (Object Oriented Programming Paradigm)***] architecture.
->>>>>>> origin/master
