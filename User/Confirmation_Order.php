@@ -101,6 +101,7 @@ if(isset($_POST['User_submit']))
                 $Toatl_Price='0';
                 $count='0';
                 $Total_Item_Overall='0';
+                $total_semua = 0;
                
              if($Get_Order->num_rows>0)
                 {
@@ -111,8 +112,9 @@ if(isset($_POST['User_submit']))
                     $Total_Item_Overall+=$row->Total_Item;
                     $Toatl_Laundry_Price=$row->Laundry_Price * $row->Total_Item;
                     // $Toatl_Dry_Price=$row->Dry_Price * $row->Total_Item;
-                    $Harga_Delivery = 1000;
-                    $Toatl_Price+=$Toatl_Laundry_Price+$Harga_Delivery;
+                    $Harga_Delivery = 5000;
+                    $Toatl_Price+=$Toatl_Laundry_Price;
+                    $total_semua = $Toatl_Price + 5000;
                     
                 ?>
              <tr>
@@ -122,7 +124,7 @@ if(isset($_POST['User_submit']))
                   <!--td><?php echo $row->Dry_Price; ?></td-->
                   <td><?php echo $row->Laundry_Price; ?></td>
                   <td><?php echo $row->Total_Item; ?></td>
-                  <td><?php echo $Toatl_Laundry_Price+$Harga_Delivery;?></td>
+                  <td><?php echo $Toatl_Laundry_Price;?></td>
                   
                   <td><a onclick="return confirm('Are you sure you want to delete this data?')"  href="Confirmation_Order.php?action&ID=<?php echo $row->ID; ?>" class=" btn btn-primary">Delete</a></td>
                 </tr>
@@ -132,6 +134,10 @@ if(isset($_POST['User_submit']))
                       
                       <tbody>
                       </tbody>
+                      <tfoot><tr>
+                  <th colspan="5">Total Harga + Ongkir Rp.5000</th>
+                  <th colspan="3"><?=number_format($total_semua,0,'.',',') ?></th>
+                </tr></tfoot>
                     </table>
               </div>  
               </div>    
@@ -162,7 +168,7 @@ if(isset($_POST['User_submit']))
                       <tr>
                         <td>1</td>
                         <td><?php echo $Total_Item_Overall;?></td>
-                        <td><?php echo $Toatl_Price; ?></td>
+                        <td><?php echo $Toatl_Price+$Harga_Delivery; ?></td>
                       </tr>
           
                       
@@ -189,9 +195,9 @@ if(isset($_POST['User_submit']))
 
                   <input type="text" name="Total_Item" hidden="" required="" class="form-control" value="<?php echo $Total_Item_Overall?>" >
                  
-                 <label><label>Tanggal Ambil</label>">
+                 <label><label>Tanggal Ambil</label>
               </div> 
-                  <input type="date" name="Pickdate" required="" class="form-control" placeholder="">
+                  <input type="date" name="Pickdate" required="" class="form-control" placeholder="Customer Name">
 
               <div class="form-group col-lg-6">
                 <label>Tanggal Antar</label>

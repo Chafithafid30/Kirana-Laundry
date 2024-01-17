@@ -49,7 +49,7 @@
               <div class="mr-5">
 <?php $GET_menu=Get_Menu_count(); 
 echo  $GET_menu->num_rows;?>
-               Total servies!</div>
+               Total services!</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="menu_list.php">
               <span class="float-left">View Details</span>

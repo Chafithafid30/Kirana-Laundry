@@ -46,7 +46,7 @@ function get_order_detail($User_Id,$Order_code)
 {
    $conn_STUDENT = $GLOBALS['db'];
      $sel="SELECT * from order_temp where User_ID='".$User_Id."' and Order_code='".$Order_code."' and Order_Status='active'";
-     //echo $sel;
+   //   echo $sel;
   $info=$conn_STUDENT->query($sel);
   return $info;
 }
@@ -54,7 +54,7 @@ function get_order_details($User_Id)
 {
    $conn_STUDENT = $GLOBALS['db'];
      $sel="SELECT * from order_temp where User_ID='".$User_Id."' and Order_code='".$Order_code."' and Order_Status=''";
-     //echo $sel;
+   //   echo $sel;
   $info=$conn_STUDENT->query($sel);
   return $info;
 }

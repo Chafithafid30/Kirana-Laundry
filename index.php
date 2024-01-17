@@ -6,12 +6,12 @@ if(isset($_POST['Formsubmit'])){
 
 $sql = "SELECT * from contact_form where  Name='".$Name."' and Message='".$Message."'";
       $info = $db->query($sql);
-          if($info->num_rows>0) 
+          if($info-> num_rows > 0) 
           { 
             
           }else{
             $insert = "insert into contact_form(Name,Phone_No,Message) 
-             VALUES('".$Name."', '".$Message."')";
+             VALUES('".$Name."', '".$Phone_No."', '".$Message."')";
               $query1 = $db->query($insert);
            }    
 }
@@ -483,7 +483,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="agileits-map">
 					</div>
 					<div class="map-grid">
-						<iframe src="https://www.google.com/maps/place/Kirana+Laundry,+Jl.+Basuki+Rahmad+No.34,+Mangunharjo,+Kec.+Mayangan,+Kota+Probolinggo,+Jawa+Timur+67217/@-7.7466478,113.2280872,17z/data=!4m2!3m1!1s0x2dd7adb7850f4b3d:0xd5378cb7ea6ed552" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.4063822072053!2d113.22589851459797!3d-7.746647794416532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7adb7850f4b3d%3A0xd5378cb7ea6ed552!2sKirana%20Laundry!5e0!3m2!1sid!2sid!4v1654235366703!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div>
 				<div class="col-md-6 agile-contact-right">
@@ -492,14 +492,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<form action="" method="POST">
 							<div class="styled-input agile-styled-input-top">
 							<div class="styled-input">
-								<input type="text" name="Name" placeholder="Nama" required="">
+								<input type="text" name="Name" placeholder="Nama Lengkap Anda!" required="">
 								<span></span>
 							</div>
 							
-							<!-- <div class="styled-input">
-								<input type="text" name="Phone_No" placeholder="Nomor Telp." required="">
+							<div class="styled-input">
+								<input type="text" name="Phone_No" placeholder="Nomor Telephone Anda!" required="">
 								<span></span>
-							</div> -->
+							</div>
 
 							<div class="styled-input">
 								<textarea name="Message" placeholder="Pesan" required=""></textarea>
@@ -538,7 +538,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //footer -->
 <div class="copyright">
 		<div class="container">
-			<p>© <?php echo date('Y');?> All rights reserved Kirana Laundry <a href=""></a></p>
+			<p>© <?php echo date('Y');?> All rights reserved Kirana Laundry<a href=""></a></p>
 		</div>
 </div>
 <script src="js/jquery.min.js"></script>

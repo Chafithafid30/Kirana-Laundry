@@ -1,4 +1,3 @@
-
 <?php
 
 function Total_user_reg()
@@ -53,14 +52,15 @@ function get_order_detail($User_Id,$Order_code)
 {
    $conn_STUDENT = $GLOBALS['db'];
      $sel="SELECT * from order_temp where User_ID='".$User_Id."' and Order_code='".$Order_code."' and Order_Status='active'";
-       $info=$conn_STUDENT->query($sel);
-     return $info;
+  $info=$conn_STUDENT->query($sel);
+  return $info;
 }
 function get_order_status_Count()
 {
    $conn_STUDENT = $GLOBALS['db'];
 	 $sel="SELECT * from order_detail where Delivery_status!='Deliver' order by  ID  ";
-	   $info=$conn_STUDENT->query($sel);
+	$info=$conn_STUDENT->query($sel);
+	
 	return $info;
 	
 }
@@ -89,12 +89,6 @@ function get_menu_Count()
 	$total=$info->num_rows;
 	return $total;
 }
-
-
-
-
-
-
 
 if(isset($_GET["Register"]))
 {
@@ -128,6 +122,4 @@ $objExecute=$db->query($sel);
      $sms= 'Error Save' ;
         }
 }
-
-
  ?>

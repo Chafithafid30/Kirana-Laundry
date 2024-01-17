@@ -45,16 +45,17 @@ $Data=get_detail($Order_Id);
               <input type="hidden" id="Laundry_Price<?php echo $Order_Id?>" value="0">
             <?php }?>
 			<?php if($Data->Delivery_Price>0){?>
-              <div class="form-group col-lg-12">
-                <label for="exampleInputEmail1">Harga Delivery >1km Rp. <?php echo $Data->Delivery_Price; ?></label>
-                <select id="Delivery_Price<?php echo $Order_Id?>"  class="form-control" >
-                  <option value="<?php echo $Data->Delivery_Price; ?>">Ya</option>
+              <div class="form-group col-lg-16">
+                <div class="form-group col-lg-12">
+                <label for="exampleInputEmail1">Harga Delivery Rp. <?php echo $Data->Delivery_Price; ?></label>
+                <input type="text" id="Delivery_Price<?php echo $Order_Id?>" disabled="" value="<?php echo $Data->Delivery_Price; ?>" class="form-control"" >
+                  <!-- <option value="<?php echo $Data->Delivery_Price; ?>">Ya</option>
                   <option value="0">Tidak</option>
                 </select>
-              </div>
+              </div> -->
             <?php }?>
 
-              <div class="form-group col-lg-12">
+              <div class="form-group col-lg-16">
                 <label for="exampleInputEmail1">Total <?php echo $Data->Services_Name; ?> (jumlah)</label>
                 <select class="form-control" required  id="total_Order<?php echo $Order_Id?>"  id="Menu_Type" >
                     <?php for($a=1;$a<=12;$a++){?>

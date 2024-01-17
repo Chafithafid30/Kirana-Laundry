@@ -33,7 +33,8 @@ include('_secure.php');
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Name</th>
+                  <th>Nama Pelanggan</th>
+                  <th>No. HP Pelanggan</th>
                   <th>Message</th>
                   <th>Delete</th>
                   
@@ -49,6 +50,7 @@ include('_secure.php');
                 <tr>
                   <th><?php echo $count; ?></th>
                   <td><?php echo $row->Name; ?></td>
+                  <td><?php echo $row->Phone_No; ?></td>
                   <td><?php echo $row->Message; ?></td>
                   <td><a onclick="return confirm('Are you sure you want to delete this message?')"
                     href="Message-info.php?Comment&ID=<?php echo $row->ID; ?>" class=" btn btn-primary">Delete</a></td>

@@ -33,7 +33,7 @@
                         <tr>
                           <th>No</th>
                           <th>Nomor Order </th>
-                          <th>Nama</th>
+                          <th>Email Pelanggan</th>
                           <th>Total (jumlah)</th>
                           <th>Harga</th>
                           <th>Tanggal Ambil</th>
@@ -61,7 +61,7 @@
                   <td><?php echo$row->Order_Code?></td>
                   <td><?php echo $row->User_Name; ?></td>
                   <td><?php echo $row->Total_Item; ?></td>  
-                  <td><?php echo $row->Total_Price; ?></td>
+                  <td><?php echo $row->Total_Price+5000; ?></td>
                   <td><?php echo $row->Pick_up_date; ?></td>
                   <td><?php echo $row->Delivery_date; ?></td> 
                   <td><a data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count;?>" class=" btn btn-primary">View</a>

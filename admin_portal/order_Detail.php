@@ -22,7 +22,7 @@ include('_secure.php');
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-archive"></i><a href="order_Detail_Print.php" target="_BLANK">Order Detail</a> / <a href="order_Detail_Print.php" target="_BLANK">Lakukan Print</a></div>
+          <i class="fa fa-archive"></i>Order Detail <a href="order_Detail_Print.php" target="_BLANK">Lakukan Print</a></div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -32,7 +32,6 @@ include('_secure.php');
                   <th>Kode Order </th>
                   <th>Nama </th>
                   <th>Alamat</th>
-                  <th>No. HP Pelanggan</th>
                   <th>Tanggal Ambil</th>
                   <th>Tanggal Antar</th>
                   <th>Total Harga</th>
@@ -43,10 +42,10 @@ include('_secure.php');
             
               <tbody>
                 <?php $Show=get_order_status_Count_complete();
-                $count1='0';
+                $count='0';
                 $total_semua = 0;
                  while ($row=$Show->fetch_object()) {
-                   $count1++;
+                   $count++;
                    // $Status=$row->status;
                    // // $Boy= $row->Dilvery_Boy_Name;
                     $SID=$row->User_ID;
@@ -55,19 +54,18 @@ include('_secure.php');
                     $total_semua+=$row->Total_Price;
                 ?>
                 <tr>
-                  <th><?php echo $count1; ?></th>
+                  <th><?php echo $count; ?></th>
                   <th>
                     <?php  
                      echo $QR_code;?>
                    </th>
                   <td><?php echo $row->User_Name; ?></td>
                   <td><?php echo $row->Address; ?></td>
-                  <td><?php echo $row->Phone_No;?></td>
                   <td><?php echo $row->Pick_up_date; ?></td>
                   <td><?php echo $row->Delivery_date; ?></td>
-                  <td><?php echo $row->Total_Price; ?></td>
+                  <td><?php echo $row->Total_Price+5000; ?></td>
                   <td><?php echo $row->Delivery_status; ?></td>
-                  <th><a  data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count1;?>" class=" btn btn-primary">View</a>
+                  <th><a  data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count;?>" class=" btn btn-primary">View</a>
                 <?php 
                  include('view_User_Order_detail.php');?>
                   </th>
@@ -76,7 +74,7 @@ include('_secure.php');
                                }?>
                             </tbody>
                   <tfoot><tr>
-                  <th colspan="7">Total</th>
+                  <th colspan="6">Total</th>
                   <th colspan="3"><?=number_format($total_semua,0,'.',',') ?></th>
                 </tr></tfoot>
                           </table>

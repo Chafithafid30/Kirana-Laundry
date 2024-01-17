@@ -62,11 +62,11 @@ if(isset($_POST['login']))
           <form  role="form" method="post" action=""> 
             <div class="form-group">
               <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Email Anda</label>
-              <input type="text" class="form-control" name="username" required="" placeholder="Masukkan Nama Lengkap Anda!">
+              <input type="text" class="form-control" name="username" required="" placeholder="Masukkan Email Anda!">
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-lock"></span> Password</label>
-              <input type="password" class="form-control" name="psw"  required="" placeholder="Masukkan Nomor Telp Anda!">
+              <input type="password" class="form-control" name="psw"  required="" placeholder="Masukkan Password Anda!">
             </div>
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
@@ -75,7 +75,14 @@ if(isset($_POST['login']))
           </form>
         </div>
         <div class="modal-footer">
-          <p>Belum Terdaftar? <a href="Registration.php">Silahkan Mendaftar</a></p>
+            <p>Belum Terdaftar? 
+                <a href="Registration.php">Silahkan Mendaftar</a>
+            </p>
+
+            <p> Kembali kehalaman Home
+                <a href="index.php">Kembali</a>
+            </p>
+
       <!--     <p>Forgot <a href="#">Password?</a></p> -->
         </div>
       </div>

@@ -26,10 +26,10 @@
              if($Get_Order->num_rows>0)
                 {
                   $Toatl_Price_confirm='0';
-                $count='0';
+                $count1='0';
          
                  while($row=$Get_Order->fetch_object())
-                    { $count++;
+                    { $count1++;
 
                     $Toatl_Laundry_Price=$row->Laundry_Price * $row->Total_Item;
                     $Toatl_Dry_Price=$row->Dry_Price * $row->Total_Item;
@@ -38,7 +38,7 @@
                    
                 ?>
              <tr>
-                  <th><?php echo $count; ?></th>
+                  <th><?php echo $count1; ?></th>
                   <td><?php echo $row->Services_Name; ?></td>
                   <td><?php echo $row->Services_Type; ?></td>
                   <td><?php echo $row->Total_Item; ?></td>

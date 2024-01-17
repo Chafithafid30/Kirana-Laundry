@@ -80,9 +80,9 @@ include('_secure.php');
               
               <tbody>
                 <?php $Show=get_order_status_Count();
-                $count1='0';
+                $count='0';
                  while ($row=$Show->fetch_object()) {
-                   $count1++;
+                   $count++;
                    // $Status=$row->status;
                    // // $Boy= $row->Dilvery_Boy_Name;
                     $SID=$row->User_ID;
@@ -90,19 +90,19 @@ include('_secure.php');
                     $QR_code=$row->Order_Code;
                 ?>
                 <tr>
-                  <th><?php echo $count1; ?></th>
+                  <th><?php echo $count; ?></th>
                   <th><?php echo $QR_code;?> </th>
                   <td><?php echo $row->User_Name; ?></td>
                   <td><?php echo $row->Address; ?></td>
                   <td><?php echo $row->Pick_up_date; ?></td>
                   <td><?php echo $row->Delivery_date; ?></td>
-                  <td><?php echo $row->Total_Price; ?></td>
+                  <td><?php echo $row->Total_Price+5000; ?></td>
                   <td><?php echo $row->Delivery_status; ?></td>
-                  <th><a  data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count1;?>" class=" btn btn-primary">View</a>
+                  <th><a  data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count;?>" class=" btn btn-primary">View</a>
                 <?php 
                  include('view_User_Order_detail.php');?>
                   </th>
-                  <td><a data-toggle="modal" data-target="#exampleModalchangestatus<?php echo $count1;?>" class=" btn btn-primary">Change Status</a>
+                  <td><a data-toggle="modal" data-target="#exampleModalchangestatus<?php echo $count;?>" class=" btn btn-primary">Change Status</a>
                  <?php include('order_status_Update.php');?>
                   </td>
                 </tr>

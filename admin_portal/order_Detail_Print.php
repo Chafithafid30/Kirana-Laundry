@@ -67,7 +67,7 @@ include('_secure.php');
                   <td><?php echo $row->Delivery_date; ?></td>
                   <td><?php echo $row->Total_Price; ?></td>
                   <td><?php echo $row->Delivery_status; ?></td>
-                  <th><a  data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count1;?>" class=" btn btn-primary">View</a>
+                  <th><a data-toggle="modal" data-target="#exampleModalUser_Order<?php echo $count1;?>" class=" btn btn-primary">View</a>
                 <?php 
                  include('view_User_Order_detail.php');?>
                   </th>

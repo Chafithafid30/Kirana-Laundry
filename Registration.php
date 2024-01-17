@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
 
             <div class="form-group">
             <label for="psw"><span class="glyphicon glyphicon-lock"></span> Password </label>
-            <input type="password" class="form-control" name="password" required="" placeholder="Masukan Password">
+            <input type="password" class="form-control" name="password" required="" placeholder="Masukan Password Yang Mudah Diingat!">
             </div>
 
              <div class="form-group">

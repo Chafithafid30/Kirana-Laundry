@@ -44,21 +44,17 @@
                   <td><?php echo $row->Services_Name; ?></td>
                   <td><?php echo $row->Services_Type; ?></td>
                   <td><?php echo $row->Total_Item; ?></td>
-                  <td><?php echo $Toatl_Price_confirm; ?></td>
-                  
-                 
-                </tr>
+                  <td><?php echo $Toatl_Price_confirm; ?></td>                 
+            </tr>
 
-             <?php  }
-                }?>
-                      
-                      <tbody>
-                      </tbody>
-                    </table>
-
-                </div>  
-                      </div>
-                    </div>
-                  </div>
-              </body>
-              </html>
+      <?php  }
+          }?>                      
+            <tbody>
+              </tbody>
+                </table>
+                  </div>  
+               </div>
+            </div>
+        </div>
+  </body>
+</html>
